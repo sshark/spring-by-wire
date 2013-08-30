@@ -12,8 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:applicationContext.xml")
-public class TestAllServices {
+@ContextConfiguration("classpath:customizedContext-nonwired.xml")
+public class TestNonWiredServices {
     @Autowired
     private AllServices allServices;
 

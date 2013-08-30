@@ -1,5 +1,5 @@
 #Spring By Wire
-A sample Spring application wires Spring components together with preferred component using @Autowired, @Component and @Primary.
+A sample Spring application showing Spring components wired together with preferred or primary component using @Autowired, @Component and @Primary.
 
 Spring allows classes to be wired together using annotations like @Autowired and @Component. Most of the time it is sufficient just to use @Autowired to tie the classes together or inject classes into another class.
 
@@ -8,6 +8,10 @@ Sometimes, there is a need to replace a standard component with a custom compone
 In this example, DefaultAllServices requires 2 components, ServiceA and ServiceB. It uses DefaultServiceA and DefaultServiceB, the default implementations, to fulfill ServiceA and ServiceB. Customized ServiceB implementation can be loaded by marking the customized implementation with @Primary and include the new class package for Spring to load. Spring will inject CustomServiceB into DefaultAllServices.
 
 This is useful when the original source code is not available for modification to include @Qualifier annotation to pick the customized service implementation.
+
+There is another XML configuration that wired the components together without using context component scanning for annotations, to show a different way of wiring the components together.
+
+The customized components are retrofitted on purpose to demonstrate the capability to customize the beans according to each project.
 
 Please refer to the Spring framework manual for more information on &lt;context:component-scan&gt; and the Spring annotations.
 

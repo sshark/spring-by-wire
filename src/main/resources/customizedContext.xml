@@ -12,4 +12,14 @@
     <import resource="applicationContext.xml" />
 
     <context:component-scan base-package="org.acme" />
+
+    <bean class="org.teckhooi.references.AllVehicles" >
+        <property name="vehicles">
+            <list>
+                <ref bean="bus" />
+                <ref bean="aeroplane" />
+                <ref bean="car" />
+            </list>
+        </property>
+    </bean>
 </beans>
